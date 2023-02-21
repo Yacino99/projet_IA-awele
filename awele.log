@@ -1,0 +1,113 @@
+Mémoire totale : 4.0 GiB
+Instanciation du bot "Random"
+7 classes ont été trouvées
+class awele.bot.demo.first.FirstBot
+class awele.bot.demo.random.RandomBot
+class awele.bot.random.RandomBot
+class awele.bot.demo.last.LastBot
+class awele.bot.demo.minmax.MinMaxBot
+class awele.bot.demo.knn2.Knn2Bot
+class awele.bot.demo.knn1.Knn1Bot
+
+Bot 1/7
+Classe : awele.bot.demo.first.FirstBot
+Instanciation du bot "First"
+Nom du bot : First
+Auteur(s) : Alexandre Blansché
+Temps d'apprentissage : 00:00:00.000
+Durée d'une prise de décision : 00:00:00.000
+Usage mémoire : 0 B
+Usage mémoire maximum : 509.6 KiB
+
+Bot 2/7
+Classe : awele.bot.demo.random.RandomBot
+Instanciation du bot "Random"
+Nom du bot : Random
+Auteur(s) : Alexandre Blansché
+Temps d'apprentissage : 00:00:00.000
+Durée d'une prise de décision : 00:00:00.000
+Usage mémoire : 418.3 KiB
+Usage mémoire maximum : 1.0 MiB
+
+Bot 3/7
+Classe : awele.bot.random.RandomBot
+Instanciation du bot "Random"
+Nom du bot : Random
+Auteur(s) : Alexandre Blansché
+Temps d'apprentissage : 00:00:00.000
+Durée d'une prise de décision : 00:00:00.000
+Usage mémoire : 600 B
+Usage mémoire maximum : 359.6 KiB
+
+Bot 4/7
+Classe : awele.bot.demo.last.LastBot
+Instanciation du bot "Last"
+Nom du bot : Last
+Auteur(s) : Alexandre Blansché
+Temps d'apprentissage : 00:00:00.000
+Durée d'une prise de décision : 00:00:00.000
+Usage mémoire : 592 B
+Usage mémoire maximum : 382.8 KiB
+
+Bot 5/7
+Classe : awele.bot.demo.minmax.MinMaxBot
+Instanciation du bot "MinMax"
+Nom du bot : MinMax
+Auteur(s) : Alexandre Blansché
+Temps d'apprentissage : 00:00:00.000
+Durée d'une prise de décision : 00:00:00.079
+Usage mémoire : 1.5 KiB
+Usage mémoire maximum : 78.0 MiB
+
+Bot 6/7
+Classe : awele.bot.demo.knn2.Knn2Bot
+Instanciation du bot "k-NN2"
+Nom du bot : k-NN2
+Auteur(s) : Alexandre Blansché
+Temps d'apprentissage : 00:00:00.015
+Durée d'une prise de décision : 00:00:00.000
+Usage mémoire : 26.1 KiB
+Usage mémoire maximum : 1.5 MiB
+
+Bot 7/7
+Classe : awele.bot.demo.knn1.Knn1Bot
+Instanciation du bot "k-NN1"
+Nom du bot : k-NN1
+Auteur(s) : Alexandre Blansché
+Temps d'apprentissage : 00:00:00.007
+Durée d'une prise de décision : 00:00:00.000
+Usage mémoire : 13.1 KiB
+Usage mémoire maximum : 1.0 MiB
+
+7 bots ont été instanciés
+Durée du chargement : 00:00:04.348
+Mémoire utilisée : 1.8 MiB
+
+Que le championnat commence !
+
+Affrontement 1/21
+First vs. Random
+Score : 1.44 - 1.56
+Random a gagné
+Nombre de coups joués : 156.855 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 2/21
+First vs. Random
+Score : 1.72 - 1.24
+First a gagné
+Nombre de coups joués : 147.225 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 3/21
+First vs. Last
+Score : 0.0 - 3.0
+Last a gagné
+Nombre de coups joués : 291.5 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 4/21
+First vs. MinMax
