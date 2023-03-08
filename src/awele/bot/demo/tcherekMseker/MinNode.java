@@ -13,8 +13,8 @@ public class MinNode extends MinMaxNode
      * Constructeur pour un noeud initial
      * @param board La situation de jeu pour laquelle il faut prendre une décision
      */
-    MinNode (Board board) throws InvalidBotException {
-        this (board,false, 0, -Double.MAX_VALUE, Double.MAX_VALUE);
+    MinNode (Board board, long ind) throws InvalidBotException {
+        this (board,false,ind, 0, -Double.MAX_VALUE, Double.MAX_VALUE);
     }
 
     /**
@@ -23,8 +23,8 @@ public class MinNode extends MinMaxNode
      * @param depth La profondeur du noeud
      * param alphabeta Le seuil pour la coupe alpha-beta
      */
-    MinNode (Board board, boolean play, int depth, double alpha, double beta) throws InvalidBotException {
-        super (board,play, depth, alpha, beta);
+    MinNode (Board board, boolean play, long ind, int depth, double alpha, double beta) throws InvalidBotException {
+        super (board,play, ind, depth, alpha, beta);
     }
 
     /**
@@ -71,8 +71,8 @@ public class MinNode extends MinMaxNode
      * @return Un noeud MaxNode du niveau suivant
      */
     @Override
-    protected MinMaxNode getNextNode (Board board, int depth, double alpha, double beta) throws InvalidBotException {
-        return new MaxNode (board, true, depth, alpha, beta);
+    protected MinMaxNode getNextNode (Board board,Long ind, int depth, double alpha, double beta) throws InvalidBotException {
+        return new MaxNode (board, true,ind, depth, alpha, beta);
     }
 
     /**

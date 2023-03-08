@@ -43,7 +43,7 @@ public class MinMaxBot extends DemoBot
         /* On construit un noeud "max" et on récupère l'évaluation des coups */
         double [] decision = new double[Board.NB_HOLES];
         try {
-            decision = new MaxNode(board).getDecision();
+            decision = new MaxNode(board,Long.MAX_VALUE/2).getDecision();
         } catch (InvalidBotException e) {
             e.printStackTrace();
         }

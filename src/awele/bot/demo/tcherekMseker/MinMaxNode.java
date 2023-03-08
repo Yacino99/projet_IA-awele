@@ -37,7 +37,7 @@ public abstract class MinMaxNode
     static final int WIN = 1;
     
     /** Table de hachage pour stocker les noeuds et éviter des calculs */ 
-    private static HashMap <Integer, MinMaxNode> nodes = new HashMap<Integer, MinMaxNode>();
+    private static HashMap <Long, MinMaxNode> nodes = new HashMap<Long, MinMaxNode>();
     
     /** Profondeur maximale */
     private static long maxDepth;
@@ -46,10 +46,12 @@ public abstract class MinMaxNode
     private double evaluation;
     
     /** L'indice du noeud pour la table de hachage */
-    private Pair<Integer,Integer> index;
+    private Long index = Long.MAX_VALUE / 2;
 
     /** Évaluation des coups selon MinMax */
     private double [] decision;
+
+    private boolean play;
 
     /**
      * @param board L'état du plateau de jeu avant de jouer un coup
@@ -57,8 +59,8 @@ public abstract class MinMaxNode
      * @param alpha Le seuil pour la coupe alpha
      * @param beta Le seuil pour la coupe beta
      */
-    public MinMaxNode (Board board,boolean play, int depth, double alpha, double beta) throws InvalidBotException {
-        
+    public MinMaxNode (Board board,boolean play, Long ind, int depth, double alpha, double beta) throws InvalidBotException {
+        this.play = play;
         /* On crée un tableau des évaluations des coups à jouer pour chaque situation possible */
         this.decision = new double [board.getPlayerHoles().length];
         for (int i = 0; i < this.decision.length; i++)
@@ -66,6 +68,7 @@ public abstract class MinMaxNode
                 this.decision [i] = MinMaxNode.IMPOSSIBLE;
         /* Initialisation de l'évaluation courante */
         this.evaluation = -Math.signum (this.getBestEvaluation ()) * Double.MAX_VALUE;
+        MinMaxNode.nodes.put(index,this);
         /* Label pour la sortie des boucles imbriquées */
         loop:
             /* On parcourt toutes les coups possibles */
@@ -78,7 +81,7 @@ public abstract class MinMaxNode
 
                     /* Si la nouvelle situation de jeu est un coup terminal (victoire du joueur courant)
                      * on affecte une valeur selon le type de noeud */
-                    if ( play && (copy.playMoveSimulationBoard(board.getCurrentPlayer(), getDecision()).getPlayerSeeds() > board.playMoveSimulationBoard(Board.otherPlayer(board.getCurrentPlayer()),decision).getOpponentSeeds()))
+                    if ( play && (copy.playMoveSimulationBoard(copy.getCurrentPlayer(), getDecision()).getPlayerSeeds() > board.playMoveSimulationBoard(Board.otherPlayer(copy.getCurrentPlayer()),decision).getOpponentSeeds()))
                         this.decision [row] = this.getBestEvaluation ();
                     /* Sinon, si la grille et pleine (sans gagnant), on a une égalité */
 
@@ -94,12 +97,12 @@ public abstract class MinMaxNode
                         if (depth < MinMaxNode.maxDepth)
                         {
                             /* On récupère l'indice du nouvel état du plateau de jeu */
-                            Pair<Integer,Integer> index = this.getMaxElem (row,copy.getCurrentPlayer(),copy.getPlayerHoles());
+                            Long inde = this.getMaxElem (row,index,board.getPlayerHoles());
                             /* Et on recherche le noeud correspondant dans la liste des noeuds déjà calculés */
-                            MinMaxNode child = MinMaxNode.getNode (index.y);
+                            MinMaxNode child = MinMaxNode.getNode (inde);
                             /* Si le noeud n'a pas encore été calculé, on le construit */
                             if (child == null)
-                                child = this.getNextNode (copy, depth + 1, alpha, beta);
+                                child = this.getNextNode (board,index, depth + 1, alpha, beta);
                             /* On récupère l'évaluation du noeud fils */
                             this.decision [row] = child.getEvaluation ();
                         }
@@ -154,7 +157,7 @@ public abstract class MinMaxNode
     /**
      * @return L'indice d'un noeud, calculé en fonction de de la situation de la grille de jeu
      */
-    public Pair<Integer,Integer> getIndex ()
+    public Long getIndex ()
     {
         return this.index;
     }
@@ -182,7 +185,7 @@ public abstract class MinMaxNode
      */
     protected static void initialize (Board board)
     {
-        MinMaxNode.nodes = new HashMap <Integer, MinMaxNode> ();
+        MinMaxNode.nodes = new HashMap <Long, MinMaxNode> ();
         MinMaxNode.maxDepth = Math.max (1, 12 - Math.max (board.getPlayerHoles()[0],board.getOpponentHoles()[0]));
         for(int i =0; i < 6 ; i++)
             MinMaxNode.maxDepth = Math.max (1, 12 - Math.max(MinMaxNode.maxDepth,Math.max (board.getPlayerHoles()[i],board.getOpponentHoles()[i])));
@@ -219,7 +222,7 @@ public abstract class MinMaxNode
      * @param beta Le seuil pour la coupe beta
      * @return Un noeud (MinNode ou MaxNode) du niveau suivant
      */
-    protected abstract MinMaxNode getNextNode (Board board, int depth, double alpha, double beta) throws InvalidBotException;
+    protected abstract MinMaxNode getNextNode (Board board,Long ind, int depth, double alpha, double beta) throws InvalidBotException;
 
     /**
      * L'évaluation du noeud
@@ -239,15 +242,16 @@ public abstract class MinMaxNode
         return this.decision;
     }
 
-    private Pair<Integer,Integer> getMaxElem(int currentHole,int player,int[] holes){
-        int ind = currentHole;
-        int maxi = holes[ind];
-        for(int i = 0; i < Board.NB_HOLES ; i++){
-            if(holes[i] > maxi && i != currentHole){
-                ind = i;
-                maxi = holes[ind];
+    private Long getMaxElem(int currentHole,long player,int[] holes){
+        Long maxi = player;
+        for(int i = 0; i < Board.NB_HOLES ; i++) {
+            if (!play && holes[i] < holes[currentHole] && maxi > index) {
+                maxi--;
+            } else if (play && holes[i] > holes[currentHole] && maxi >= index) {
+                maxi++;
             }
+
         }
-        return new Pair<Integer,Integer>(ind,maxi);
+        return maxi;
     }
 }

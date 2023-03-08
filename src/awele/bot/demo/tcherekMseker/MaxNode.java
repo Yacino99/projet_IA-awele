@@ -13,8 +13,8 @@ public class MaxNode extends MinMaxNode
      * Constructeur pour un noeud initial
      * @param board La situation de jeu pour laquelle il faut prendre une décision
      */
-    MaxNode (Board board) throws InvalidBotException {
-        this (board, true, 0, -Double.MAX_VALUE, Double.MAX_VALUE);
+    MaxNode (Board board,long ind) throws InvalidBotException {
+        this (board, true, ind, 0, -Double.MAX_VALUE, Double.MAX_VALUE);
     }
 
     /**
@@ -23,8 +23,8 @@ public class MaxNode extends MinMaxNode
      * @param depth La profondeur du noeud
      * param alphabeta Le seuil pour la coupe alpha-beta
      */
-    MaxNode (Board board, boolean play, int depth, double alpha, double beta) throws InvalidBotException {
-        super (board,play, depth, alpha, beta);
+    MaxNode (Board board, boolean play, long ind, int depth, double alpha, double beta) throws InvalidBotException {
+        super (board,play, ind, depth, alpha, beta);
     }
 
     /**
@@ -63,6 +63,7 @@ public class MaxNode extends MinMaxNode
         return eval >= beta;
     }
 
+
     /**
      * Retourne un noeud MinNode du niveau suivant
      * @param board L'état de la grille de jeu
@@ -71,8 +72,8 @@ public class MaxNode extends MinMaxNode
      * @return Un noeud MinNode du niveau suivant
      */
     @Override
-    protected MinMaxNode getNextNode (Board board, int depth, double alpha, double beta) throws InvalidBotException {
-        return new MinNode (board, false, depth, alpha, beta);
+    protected MinMaxNode getNextNode (Board board,Long ind, int depth,  double alpha, double beta) throws InvalidBotException {
+        return new MinNode (board, false,ind, depth, alpha, beta);
     }
 
     /**
