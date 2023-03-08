@@ -1,15 +1,16 @@
 Mémoire totale : 4.0 GiB
 Instanciation du bot "Random"
-7 classes ont été trouvées
+8 classes ont été trouvées
 class awele.bot.demo.first.FirstBot
 class awele.bot.demo.random.RandomBot
 class awele.bot.random.RandomBot
 class awele.bot.demo.last.LastBot
 class awele.bot.demo.minmax.MinMaxBot
 class awele.bot.demo.knn2.Knn2Bot
+class awele.bot.demo.tcherekMseker.MinMaxBot
 class awele.bot.demo.knn1.Knn1Bot
 
-Bot 1/7
+Bot 1/8
 Classe : awele.bot.demo.first.FirstBot
 Instanciation du bot "First"
 Nom du bot : First
@@ -17,19 +18,19 @@ Auteur(s) : Alexandre Blansché
 Temps d'apprentissage : 00:00:00.000
 Durée d'une prise de décision : 00:00:00.000
 Usage mémoire : 0 B
-Usage mémoire maximum : 509.6 KiB
+Usage mémoire maximum : 564.6 KiB
 
-Bot 2/7
+Bot 2/8
 Classe : awele.bot.demo.random.RandomBot
 Instanciation du bot "Random"
 Nom du bot : Random
 Auteur(s) : Alexandre Blansché
 Temps d'apprentissage : 00:00:00.000
 Durée d'une prise de décision : 00:00:00.000
-Usage mémoire : 418.3 KiB
-Usage mémoire maximum : 1.0 MiB
+Usage mémoire : 352 B
+Usage mémoire maximum : 373.9 KiB
 
-Bot 3/7
+Bot 3/8
 Classe : awele.bot.random.RandomBot
 Instanciation du bot "Random"
 Nom du bot : Random
@@ -37,9 +38,9 @@ Auteur(s) : Alexandre Blansché
 Temps d'apprentissage : 00:00:00.000
 Durée d'une prise de décision : 00:00:00.000
 Usage mémoire : 600 B
-Usage mémoire maximum : 359.6 KiB
+Usage mémoire maximum : 355.5 KiB
 
-Bot 4/7
+Bot 4/8
 Classe : awele.bot.demo.last.LastBot
 Instanciation du bot "Last"
 Nom du bot : Last
@@ -47,67 +48,296 @@ Auteur(s) : Alexandre Blansché
 Temps d'apprentissage : 00:00:00.000
 Durée d'une prise de décision : 00:00:00.000
 Usage mémoire : 592 B
-Usage mémoire maximum : 382.8 KiB
+Usage mémoire maximum : 370.4 KiB
 
-Bot 5/7
+Bot 5/8
 Classe : awele.bot.demo.minmax.MinMaxBot
 Instanciation du bot "MinMax"
 Nom du bot : MinMax
 Auteur(s) : Alexandre Blansché
 Temps d'apprentissage : 00:00:00.000
-Durée d'une prise de décision : 00:00:00.079
+Durée d'une prise de décision : 00:00:00.004
 Usage mémoire : 1.5 KiB
-Usage mémoire maximum : 78.0 MiB
+Usage mémoire maximum : 30.0 MiB
 
-Bot 6/7
+Bot 6/8
 Classe : awele.bot.demo.knn2.Knn2Bot
 Instanciation du bot "k-NN2"
 Nom du bot : k-NN2
 Auteur(s) : Alexandre Blansché
-Temps d'apprentissage : 00:00:00.015
+Temps d'apprentissage : 00:00:00.017
 Durée d'une prise de décision : 00:00:00.000
-Usage mémoire : 26.1 KiB
-Usage mémoire maximum : 1.5 MiB
+Usage mémoire : 25.2 KiB
+Usage mémoire maximum : 1.4 MiB
 
-Bot 7/7
+Bot 7/8
+Classe : awele.bot.demo.tcherekMseker.MinMaxBot
+Instanciation du bot "TcherekMseker"
+Nom du bot : TcherekMseker
+Auteur(s) : Yacino99
+Temps d'apprentissage : 00:00:00.000
+Durée d'une prise de décision : 00:00:00.000
+Usage mémoire : 1.4 KiB
+Usage mémoire maximum : 170.9 KiB
+
+Bot 8/8
 Classe : awele.bot.demo.knn1.Knn1Bot
 Instanciation du bot "k-NN1"
 Nom du bot : k-NN1
 Auteur(s) : Alexandre Blansché
-Temps d'apprentissage : 00:00:00.007
+Temps d'apprentissage : 00:00:00.005
 Durée d'une prise de décision : 00:00:00.000
 Usage mémoire : 13.1 KiB
 Usage mémoire maximum : 1.0 MiB
 
-7 bots ont été instanciés
-Durée du chargement : 00:00:04.348
-Mémoire utilisée : 1.8 MiB
+8 bots ont été instanciés
+Durée du chargement : 00:00:00.635
+Mémoire utilisée : 1.5 MiB
 
 Que le championnat commence !
 
-Affrontement 1/21
+Affrontement 1/28
 First vs. Random
-Score : 1.44 - 1.56
+Score : 1.39 - 1.6
 Random a gagné
-Nombre de coups joués : 156.855 par match
+Nombre de coups joués : 157.08 par match
 Durée : 00:00:00.000 par match
-Mémoire utilisée : 1.8 MiB
+Mémoire utilisée : 1.4 MiB
 
-Affrontement 2/21
+Affrontement 2/28
 First vs. Random
-Score : 1.72 - 1.24
+Score : 1.51 - 1.48
 First a gagné
-Nombre de coups joués : 147.225 par match
+Nombre de coups joués : 152.46 par match
 Durée : 00:00:00.000 par match
-Mémoire utilisée : 1.8 MiB
+Mémoire utilisée : 1.4 MiB
 
-Affrontement 3/21
+Affrontement 3/28
 First vs. Last
 Score : 0.0 - 3.0
 Last a gagné
 Nombre de coups joués : 291.5 par match
 Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.4 MiB
+
+Affrontement 4/28
+First vs. MinMax
+Score : 0.0 - 3.0
+MinMax a gagné
+Nombre de coups joués : 54.985 par match
+Durée : 00:00:00.028 par match
 Mémoire utilisée : 1.8 MiB
 
-Affrontement 4/21
-First vs. MinMax
+Affrontement 5/28
+First vs. k-NN2
+Score : 0.24 - 2.76
+k-NN2 a gagné
+Nombre de coups joués : 187.785 par match
+Durée : 00:00:00.001 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 6/28
+First vs. TcherekMseker
+Score : 1.6 - 1.39
+First a gagné
+Nombre de coups joués : 149.305 par match
+Durée : 00:00:00.002 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 7/28
+First vs. k-NN1
+Score : 0.52 - 2.47
+k-NN1 a gagné
+Nombre de coups joués : 208.95 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 8/28
+Random vs. Random
+Score : 1.52 - 1.43
+Random a gagné
+Nombre de coups joués : 94.675 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 9/28
+Random vs. Last
+Score : 0.15 - 2.85
+Last a gagné
+Nombre de coups joués : 109.35 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 10/28
+Random vs. MinMax
+Score : 0.0 - 3.0
+MinMax a gagné
+Nombre de coups joués : 34.78 par match
+Durée : 00:00:00.016 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 11/28
+Random vs. k-NN2
+Score : 0.56 - 2.42
+k-NN2 a gagné
+Nombre de coups joués : 81.095 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 12/28
+Random vs. TcherekMseker
+Score : 1.25 - 1.73
+TcherekMseker a gagné
+Nombre de coups joués : 92.25 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 13/28
+Random vs. k-NN1
+Score : 0.43 - 2.56
+k-NN1 a gagné
+Nombre de coups joués : 78.06 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 14/28
+Random vs. Last
+Score : 0.06 - 2.94
+Last a gagné
+Nombre de coups joués : 112.225 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 15/28
+Random vs. MinMax
+Score : 0.0 - 3.0
+MinMax a gagné
+Nombre de coups joués : 34.4 par match
+Durée : 00:00:00.016 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 16/28
+Random vs. k-NN2
+Score : 0.58 - 2.41
+k-NN2 a gagné
+Nombre de coups joués : 78.185 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 17/28
+Random vs. TcherekMseker
+Score : 1.27 - 1.72
+TcherekMseker a gagné
+Nombre de coups joués : 95.015 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 18/28
+Random vs. k-NN1
+Score : 0.46 - 2.53
+k-NN1 a gagné
+Nombre de coups joués : 78.27 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 19/28
+Last vs. MinMax
+Score : 0.0 - 3.0
+MinMax a gagné
+Nombre de coups joués : 68.2 par match
+Durée : 00:00:00.033 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 20/28
+Last vs. k-NN2
+Score : 2.86 - 0.13
+Last a gagné
+Nombre de coups joués : 115.865 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 21/28
+Last vs. TcherekMseker
+Score : 2.79 - 0.21
+Last a gagné
+Nombre de coups joués : 111.475 par match
+Durée : 00:00:00.001 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 22/28
+Last vs. k-NN1
+Score : 2.7 - 0.3
+Last a gagné
+Nombre de coups joués : 130.425 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 23/28
+MinMax vs. k-NN2
+Score : 3.0 - 0.0
+MinMax a gagné
+Nombre de coups joués : 43.925 par match
+Durée : 00:00:00.021 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 24/28
+MinMax vs. TcherekMseker
+Score : 3.0 - 0.0
+MinMax a gagné
+Nombre de coups joués : 35.87 par match
+Durée : 00:00:00.017 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 25/28
+MinMax vs. k-NN1
+Score : 3.0 - 0.0
+MinMax a gagné
+Nombre de coups joués : 42.17 par match
+Durée : 00:00:00.021 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 26/28
+k-NN2 vs. TcherekMseker
+Score : 2.41 - 0.58
+k-NN2 a gagné
+Nombre de coups joués : 80.185 par match
+Durée : 00:00:00.001 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 27/28
+k-NN2 vs. k-NN1
+Score : 1.47 - 1.5
+k-NN1 a gagné
+Nombre de coups joués : 84.165 par match
+Durée : 00:00:00.001 par match
+Mémoire utilisée : 1.8 MiB
+
+Affrontement 28/28
+TcherekMseker vs. k-NN1
+Score : 0.37 - 2.62
+k-NN1 a gagné
+Nombre de coups joués : 78.95 par match
+Durée : 00:00:00.000 par match
+Mémoire utilisée : 1.8 MiB
+
+Durée du championnat : 00:00:35.141
+
+Scores finaux :
+First : 5.26
+Random : 5.51
+Random : 5.28
+Last : 17.14
+MinMax : 21.0
+k-NN2 : 11.6
+TcherekMseker : 6.0
+k-NN1 : 11.98
+
+Rangs :
+1. MinMax : 21.0
+2. Last : 17.14
+3. k-NN1 : 11.98
+4. k-NN2 : 11.6
+5. TcherekMseker : 6.0
+6. Random : 5.51
+7. Random : 5.28
+8. First : 5.26
