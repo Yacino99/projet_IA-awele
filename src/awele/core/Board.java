@@ -160,7 +160,8 @@ public class Board
     {
         boolean [] valid = this.validMoves (player);
         int bestMove = -1;
-        double bestDecision = -Double.MAX_VALUE;
+//        double bestDecision = -Double.MAX_VALUE;
+        double bestDecision = Double.NEGATIVE_INFINITY;
         int nbBest = 0;
         for (int i = 0; i < Board.NB_HOLES; i++)
             if (Double.isNaN (decision [i]))
