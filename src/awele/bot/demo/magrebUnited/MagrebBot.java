@@ -1,10 +1,11 @@
 package awele.bot.demo.magrebUnited;
 
+import awele.bot.CompetitorBot;
 import awele.bot.DemoBot;
 import awele.core.Board;
 import awele.core.InvalidBotException;
 
-public class MagrebBot extends DemoBot {
+public class MagrebBot extends CompetitorBot {
 
     private static final int DEPTH = 7;
 

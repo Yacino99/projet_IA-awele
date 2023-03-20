@@ -14,7 +14,6 @@ public abstract class  MinMaxNode {
     private double [] decision;
 
 
-    //Algo 1
     public MinMaxNode (Board board, int depth, double alpha, double beta)
     {
 
@@ -83,7 +82,7 @@ public abstract class  MinMaxNode {
 
 
 
-    // Algo 1
+
     private double evaluate(Board boardCopy, int depth) {
         return diffScore(boardCopy) + evalSituation(boardCopy, depth);
         // return evalSituation(boardCopy, depth);
@@ -92,7 +91,7 @@ public abstract class  MinMaxNode {
 
 
 
-    //Eval 3
+
     public double evalSituation(Board board, int depth) {
         int currentPlayer = board.getCurrentPlayer();
         int opponentPlayer = Board.otherPlayer(currentPlayer);
@@ -101,7 +100,7 @@ public abstract class  MinMaxNode {
 
         double score = 0.0;
 
-        // Evaluation based on number of seeds in the holes
+        // Évaluation basée sur le nombre de graines dans les trous
         int[] currentPlayerHoles = board.getPlayerHoles();
         int[] opponentPlayerHoles = board.getOpponentHoles();
         for (int i = 0; i < Board.NB_HOLES; i++) {
@@ -114,15 +113,15 @@ public abstract class  MinMaxNode {
         }
         score *= 0.7;
 
-        // Evaluation based on number of captured seeds
+        // Évaluation basée sur le nombre de graines capturées
         score += (currentPlayerCaptured - opponentPlayerCaptured) * 2.0;
         score *= 0.2;
 
-        // Evaluation based on difference in number of seeds and captured seeds
+        // Évaluation basée sur la différence entre le nombre de graines et les graines capturées
         double diffScore = score - currentPlayerCaptured + opponentPlayerCaptured;
         score += diffScore * 0.3;
 
-        // Evaluation based on number of turns remaining
+        // Evaluation basée sur le nombre de tours restants
         double turnsRemainingScore = 1.0 / (depth + 1);
         score += turnsRemainingScore * 0.1;
 
